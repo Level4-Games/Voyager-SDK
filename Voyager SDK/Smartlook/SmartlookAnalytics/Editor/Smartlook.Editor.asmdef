@@ -1,0 +1,18 @@
+{
+    "name": "Smartlook.Editor",
+    "rootNamespace": "SmartlookUnity",
+    "references": [
+        "GUID:52537e7b5c9a4f64e9d1ef8878c041c3"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
