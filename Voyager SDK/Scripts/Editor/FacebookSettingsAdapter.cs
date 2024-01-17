@@ -17,7 +17,7 @@ namespace Voyager_SDK.Editor
                 settings = VoyagerResources.LoadFromResources<FacebookSettings>();
 
             if (settings == null)
-                settings = VoyagerSettingsEditor.CreateSettingAsset<FacebookSettings>();
+                settings = VoyagerSettingsEditor.CreateSettingAsset<FacebookSettings>("Facebook Settings");
 
             return settings;
         }
@@ -25,6 +25,7 @@ namespace Voyager_SDK.Editor
         public static void ApplySettings()
         {
             var voyagerSettings = VoyagerSettingsAdapter.Settings;
+            GetFacebookSettings();
             
             if (!string.IsNullOrEmpty(voyagerSettings.FacebookID))
             {

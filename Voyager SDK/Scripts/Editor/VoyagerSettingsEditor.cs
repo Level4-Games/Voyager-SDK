@@ -26,6 +26,13 @@ namespace Voyager_SDK.Editor
             Selection.activeObject = GASettingsAdapter.Settings;
         }
         
+        [MenuItem("Voyager/Voyager SDK/Show Applovin Settings", false, 100)]
+        private static void EditApplovinSettings()
+        {
+            Selection.activeObject = ApplovinSettingsAdapter.Settings;
+        }
+
+        
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
@@ -40,31 +47,29 @@ namespace Voyager_SDK.Editor
             EditorGUILayout.HelpBox("Unexpected Platform, Please set to Android or IOS ", MessageType.Error);   
         }
         
-        [ContextMenu("Apply Settings")]
+        [MenuItem("Voyager/Voyager SDK/Apply Settings", false, 120)]
         private static void ApplySettings()
         {
-            FacebookSettingsAdapter.ApplySettings();
-            GASettingsAdapter.ApplySettings();
+            VoyagerSettingsAdapter.ApplySettings();
         }
 
         internal static T CreateSettingAsset<T>(string overrideName = "") where T : ScriptableObject
         {
             var settings = CreateInstance<T>();
-
-            VoyagerExtensions.VoyagerLog($" Creating {typeof(T).Name} File Asset !".RichTextColor(Color.white));
+            var name = string.IsNullOrEmpty(overrideName) ? typeof(T).Name : overrideName;
+            
+            VoyagerExtensions.VoyagerLog($" Creating {name} File Asset !".RichTextColor(Color.white));
 
             if (!AssetDatabase.IsValidFolder(ResourcePath))
                 AssetDatabase.CreateFolder(AssetFolder, ResourceFolder);
 
             if (!AssetDatabase.IsValidFolder(SettingsPath))
                 AssetDatabase.CreateFolder(ResourcePath, SettingsFolder);
-
-            var name = string.IsNullOrEmpty(overrideName) ? typeof(T).Name : overrideName;
             
             AssetDatabase.CreateAsset(settings, SettingsPath + "/" + name + ".asset");
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
-
+            
             // settings = Resources.Load<T>(SettingsFolder + typeof(T).Name);
             settings = Resources.LoadAll<T>(SettingsFolder).FirstOrDefault();
 

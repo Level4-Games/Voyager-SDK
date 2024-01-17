@@ -1527,7 +1527,7 @@ namespace GameAnalyticsSDK.Editor
                     EditorGUILayout.Space();
 
                     const int layoutWidth   = 35;
-                    const int btnSize       = 12;
+                    // const int btnSize       = 12;
 
                     GUILayout.BeginVertical("Performance");
 

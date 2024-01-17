@@ -6,19 +6,17 @@ namespace Voyager_SDK.Editor
 {
     public abstract class GASettingsAdapter : SettingsAdapterBase
     {
-        private const string GameAnalyticsPath = "/Resources/GameAnalytics";
-
         public static Settings Settings => GetSettings();
 
         private static Settings GetSettings()
         {
-            var settings = GetFromDefaultSDKPath<Settings>(GameAnalyticsPath);
+            var settings = GameAnalyticsSDK.GameAnalytics.SettingsGA;
 
             if (settings == null)
                 settings = VoyagerResources.LoadFromResources<Settings>();
 
             if (settings == null)
-                settings = VoyagerSettingsEditor.CreateSettingAsset<Settings>();
+                settings = VoyagerSettingsEditor.CreateSettingAsset<Settings>("GameAnalytics Settings");
 
             return settings;
         }
@@ -26,6 +24,7 @@ namespace Voyager_SDK.Editor
         public static void ApplySettings()
         {
             var voyagerSettings = VoyagerSettingsAdapter.Settings;
+            GetSettings();
 
             UpdatePlatform(RuntimePlatform.Android, voyagerSettings.AndroidGameKey, voyagerSettings.AndroidSecretKey);
             UpdatePlatform(RuntimePlatform.IPhonePlayer, voyagerSettings.IOSGameKey, voyagerSettings.IOSSecretKey);

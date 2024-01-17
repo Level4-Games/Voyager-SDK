@@ -6,9 +6,6 @@
   "unity": "2021.3",
   "documentationUrl": "https://example.com/",
   "changelogUrl": "https://example.com/changelog.html",
-  "dependencies": {
-    "com.google.external-dependency-manager": "1.2.177"
-  },
   "keywords": [
     "sdk"
   ],

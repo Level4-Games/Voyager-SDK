@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Voyager_SDK
@@ -66,9 +65,7 @@ namespace Voyager_SDK
             : iOSBannerAdUnitId.Trim();
         
         [Header("Ad Settings")] 
-        public int InitialInterstitialDuration;
-        public int InterstitialInterval;
-        
-        public bool bannerActive;
+        public int InitialInterstitialDuration = 120;
+        public int InterstitialInterval = 90;
     }
 }

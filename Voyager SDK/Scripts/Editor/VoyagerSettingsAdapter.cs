@@ -12,9 +12,18 @@ namespace Voyager_SDK.Editor
                 settings = VoyagerResources.LoadFromResources<VoyagerSettings>();
 
             if (settings == null)
-                settings = VoyagerSettingsEditor.CreateSettingAsset<VoyagerSettings>();
+                settings = VoyagerSettingsEditor.CreateSettingAsset<VoyagerSettings>("Voyager Settings");
 
             return settings;
+        }
+
+        public static void ApplySettings()
+        {
+            GetVoyagerSettings();
+            
+            FacebookSettingsAdapter.ApplySettings();
+            GASettingsAdapter.ApplySettings();
+            ApplovinSettingsAdapter.ApplySettings();
         }
     }
 }
