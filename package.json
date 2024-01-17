@@ -4,6 +4,7 @@
   "displayName": "Voyager Publishing SDK",
   "description": "Voyager Publishing SDK for Studios Developed By Level4 Games",
   "unity": "2021.3",
+  "hideInEditor" : "false",
   "documentationUrl": "https://example.com/",
   "changelogUrl": "https://example.com/changelog.html",
   "keywords": [
