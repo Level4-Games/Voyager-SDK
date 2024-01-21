@@ -1,0 +1,21 @@
+{
+    "name": "VoyagerSDKEditor",
+    "rootNamespace": "Voyager_SDK.Editor",
+    "references": [
+        "GUID:78b7110ba2a97594d8d9504cceb0c82f",
+        "GUID:995913c7e5ef24040bbef8815aeac049",
+        "GUID:a10a05a8449c42519fd80f2b8b580de3",
+        "GUID:691e0eb4b7a542dba2219d48c3254f1c",
+        "GUID:f5a73eedd496544a0824bfe6b81aa65d",
+        "GUID:f9bdb6ee76021dc42832371ef3b3ff87"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

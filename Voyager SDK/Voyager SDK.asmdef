@@ -1,0 +1,21 @@
+{
+    "name": "VoyagerSDK",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b4318b6f3695442c4983c360248781db",
+        "GUID:b649415412a3d4e8a83df256b07478bb",
+        "GUID:4139e191aa32f459e9eb2e331225ad7e",
+        "GUID:28dbe068614d04452a194e9c468a9676",
+        "GUID:52537e7b5c9a4f64e9d1ef8878c041c3",
+        "GUID:a4cfc1a18fa3a469b96d885db522f42e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
