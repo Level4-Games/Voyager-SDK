@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -8,7 +9,7 @@ namespace Voyager_SDK.Editor
     [CustomEditor(typeof(VoyagerSettings))]
     public class VoyagerSettingsEditor : UnityEditor.Editor
     {
-        [MenuItem("Voyager/Voyager SDK/Show SDK Settings", false, 100)]
+        [MenuItem("Voyager/Voyager SDK/Show SDK Settings", false, 1)]
         private static void EditSDKSettings()
         {
             Selection.activeObject = VoyagerSettingsAdapter.Settings;
@@ -39,7 +40,7 @@ namespace Voyager_SDK.Editor
             
             GUILayout.Space(15);
         
-            if (GUILayout.Button("Apply Settings"))
+            if (GUILayout.Button(Environment.NewLine + "Apply Settings" + Environment.NewLine))
             {
                 ApplySettings();
             }
