@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Voyager_SDK
 {
+    [CreateAssetMenu(fileName = "Voyager Settings", menuName = "Voyager SDK / Voyager Settings", order = 1)]
     public class VoyagerSettings : SingletonSettings<VoyagerSettings>
     {
         [Header("Facebook")]
