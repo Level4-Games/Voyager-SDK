@@ -6,7 +6,7 @@ using static Voyager_SDK.VoyagerResources;
 namespace Voyager_SDK.Editor
 {
     [CustomEditor(typeof(VoyagerSettings))]
-    public abstract class VoyagerSettingsEditor : UnityEditor.Editor
+    public class VoyagerSettingsEditor : UnityEditor.Editor
     {
         [MenuItem("Voyager/Voyager SDK/Show SDK Settings", false, 100)]
         private static void EditSDKSettings()
