@@ -1,6 +1,6 @@
 {
   "name": "com.voyager-sdk",
-  "version": "0.1.0",
+  "version": "0.1.2.alpha",
   "displayName": "Voyager SDK",
   "description": "Voyager SDK for Studios Developed By Level4 Games",
   "unity": "2021.3",
