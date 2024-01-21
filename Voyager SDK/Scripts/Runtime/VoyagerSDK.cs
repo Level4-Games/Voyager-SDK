@@ -1,8 +1,9 @@
 using System;
+using UnityEngine;
 
 namespace Voyager_SDK
 {
-    public class VoyagerSDK
+    public class VoyagerSDK : MonoBehaviour
     {
         /// <summary>
         /// Display an Interstitial Ad

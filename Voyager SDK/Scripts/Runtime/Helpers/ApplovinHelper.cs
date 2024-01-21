@@ -79,9 +79,6 @@ namespace Voyager_SDK
 
         public static void ShowInterstitial(string placement)
         {
-            if (DataManager.NoAds)
-                return;
-
             if (_nextInterstitialTime < Time.time && MaxSdk.IsInterstitialReady(Settings.InterstitialId))
             {
                 RefreshInterTimer();
@@ -116,7 +113,7 @@ namespace Voyager_SDK
 
             Debug.Log("Inter " + "Load failed: " + errorInfo.Code + "\nRetrying in " + retryDelay + "s...");
 
-            AppManager.Instance.Invoke(nameof(LoadInterstitial), (float)retryDelay);
+            VoyagerAppManager.Instance.Invoke(nameof(LoadInterstitial), (float)retryDelay);
         }
 
         private static void InterstitialFailedToDisplayEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo,
@@ -196,7 +193,7 @@ namespace Voyager_SDK
 
             Debug.Log("Rewarded " + "Load failed: " + errorInfo.Code + "\nRetrying in " + retryDelay + "s...");
 
-            AppManager.Instance.Invoke(nameof(LoadRewardedAd), (float)retryDelay);
+            VoyagerAppManager.Instance.Invoke(nameof(LoadRewardedAd), (float)retryDelay);
         }
 
         private static void OnRewardedAdFailedToDisplayEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo,
