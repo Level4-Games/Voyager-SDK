@@ -7,7 +7,8 @@
   "hideInEditor" : "false",
   "dependencies": {
     "com.gameanalytics.sdk": "7.7.2",
-    "com.google.external-dependency-manager": "1.2.178"
+    "com.google.external-dependency-manager": "1.2.178",
+    "com.revenuecat.purchases-unity": "6.7.0"
   },
   "documentationUrl": "https://example.com/",
   "changelogUrl": "https://example.com/changelog.html",
